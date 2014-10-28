@@ -1,5 +1,5 @@
 
-ready = ->
+jQuery ->
 
   if $('#sortable').length > 0
     table_width = $('#sortable').width()
@@ -29,5 +29,3 @@ ready = ->
           data: { task: {task_id: item_id, row_order_position: position } }
         )
     )
-$(document).ready(ready)
-$(document).on('page:load', ready)
