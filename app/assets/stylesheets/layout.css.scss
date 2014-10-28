@@ -1,0 +1,24 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body { margin-bottom: 60px; }
+
+#header {
+  height: 70px;
+  min-width: 100%;
+  background-color: white;
+  color: black;
+}
+
+.content { padding: 50px; }
+
+#tasks, .deadline { padding-left: 15px; }
+
+.edit {
+  float: right;
+  padding-right: 10px;
+}
+
+#task-form { padding-bottom: 15px; }

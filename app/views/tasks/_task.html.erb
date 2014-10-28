@@ -1,0 +1,26 @@
+<table class="table table-bordered table-striped" id="sortable">
+    <tbody>
+          <% @tasks.each do |task| %>
+      <tr data-item-id=<%= task.id %> class="item">
+        <td>
+  <%= task.description %>
+
+  <span class="deadline"><%= task.deadline %></span>
+        
+  <span class="edit">
+    <%= link_to edit_task_path(task), remote: true do %>
+      <button class="btn btn-primary btn-xs">Edit</button>
+    <% end %>
+
+    
+    <%= link_to task, remote: true, method: :delete,
+        data: { confirm: 'Are you sure?' } do %>
+      <button class="btn btn-danger btn-xs">Delete!</button>
+    <% end %>
+    </td>
+
+</tr>
+
+  </tbody>
+  <% end %>
+</table> 

@@ -1,0 +1,5 @@
+$('#tasks').html("<%= escape_javascript(render :partial => @task )%>");
+
+
+$('#task-form').slideUp(350);
+$(document).on('page:load', ready)
